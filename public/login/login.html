@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/toast.css"  rel="stylesheet" type="text/css">
+	<link href="../css/loader.css"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link href="../css/loader.css"  rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>Login</title>
+</head>
+<body>
+<!-- 
+	<div id="loading" style="display: none;">
+		<img id="loading-image" src="../images/InternetSlowdown_Day.gif" alt="Loading..." />
+	</div> -->
+
+    <img class="wave" src="../images/wave.jpg">
+	<div class="container">
+		<div class="img">
+			<img src="../images/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="login.html">
+				<img src="../images/icons/avatar.svg">
+				<h2 class="title">Welcome</h2>
+				<br>
+				<button type="button" onclick="loginWithGoogle()" class="googleBtn">Login With Google</button>
+				<p class="or">OR</p>
+				<a>
+				<br>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" id="email" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" id="password" class="input">
+            	   </div>
+            	</div>
+                <a class="forgot-password" href="#">Forgot Password?</a>
+				<br>
+
+			  
+				<input type="submit" class="btn loginBtn" value="Login" id="loginbtn">
+				
+				<br>
+				<div id='loaddiv' hidden>
+				<div id="loader"></div>
+				<p><b>Loading please wait</b></p>
+				</div>
+             
+                <label>Don't have an account? <a href="#signupModalCenter" data-toggle="modal">Sign up</a></label>
+            </form>
+        </div>
+	</div>
+
+	<!--SignUp Modal-->
+	<div class="modal fade" id="signupModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			<!-- <div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalCenterTitle">Signup Form</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div> -->
+			<div class="modal-body">
+			  <div class="signup-logo">
+				 <a href="../home-03.html"> <img src="../images/icons/icon.png"></a><br>
+				  <h1>Sign Up Now</h1>
+			  </div>
+
+			  <div class="signup-form">
+			  <input class="signup-input" id="FullName" type="text" placeholder="Full Name">
+			  <input class="signup-input" id="Email" type="email" placeholder="Email">
+			  <!-- <input class="signup-input" id="Address" type="text" placeholder="Address">
+			  <input class="signup-input" id="Number" type="number" placeholder="Phone#"> -->
+			  <input class="signup-input" id="Password" type="password" placeholder="Password">
+			  <p style="float: left;"><span><input onclick="clickme()" type="checkbox"></span> I agree to the <a href="#">Terms of services</a></p>
+			  <input class="btn" id="signup-btn" onclick="Signup()" type="button" value="submit" disabled> 
+
+			  <br/>
+			  <p style="text-align: center;"><i id="error1" style="color: red;"> </i></p>
+
+			</div>
+
+			<label>Already have an account? <a id="signup-login" href="#" data-toggle="modal">login</a></label>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div id="toast"></div>
+
+    <script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="../config/firebase.js"></script>
+<script type="text/javascript" src="../js/login.js"></script>
+<script src="../js/toast.js"></script>
+
+
+
+
+</body>
+</html>

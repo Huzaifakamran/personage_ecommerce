@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Privacy Policy</title>
+	<title>Orders</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-    <link rel="icon" type="image/png" href="images/icons/icon.png"/>
+<link rel="icon" type="image/png" href="images/icons/icon.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -27,10 +27,12 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link href="css/loader.css"  rel="stylesheet" type="text/css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
 	
+	<!-- Header -->
 	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
@@ -64,31 +66,28 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li >
-								<a href="index.html">Home</a>
+								<a href="index.html" >Home</a>
 							</li>
 <!-- 
 							<li>
 								<a href="product.html">Shop</a>
 							</li>
 
-							
+							<li class="label1" data-label1="hot">
+								<a href="shoping-cart.html">Features</a>
+							</li>
 
 							<li>
 								<a href="blog.html">Blog</a>
 							</li> -->
 
-							<li >
+							<li>
 								<a href="about.html">About</a>
 							</li>
 
-							<li>
+							<li >
 								<a href="contact.html">Contact</a>
-                            </li>
-                            
-                            <li class="active-menu">
-								<a href="policy.html">Privacy Policy</a>
-                            </li>
-                            
+							</li>
 						</ul>
 					</div>	
 
@@ -102,9 +101,18 @@
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div> 
 
-						<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+					
+							<!-- <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11  js-show-cart"  >
+								<i class="zmdi zmdi-shopping-cart"></i>
+							</div> -->
+						
+
+
+						 <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+
+
 					</div>
 				</nav>
 			</div>	
@@ -115,9 +123,9 @@
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
 				<a href="index.html">
-                    <!-- <img src="images/icons/logo-01.png" alt="IMG-LOGO"> -->
-                    <h1 style="color:black; font-weight: bolder;">PERSONAGE</h1>
-                </a>
+					<!-- <img src="images/icons/logo-01.png" alt="IMG-LOGO"> -->
+					<h1 style="color:black; font-weight: bolder;">PERSONAGE</h1>
+				</a>
 			</div>
 
 			<!-- Icon header -->
@@ -153,7 +161,7 @@
 				<li>
 					<div class="right-top-bar flex-w h-full">
 					
-						<a href="login/login.html" class="flex-c-m p-lr-10 trans-04">
+						<a href="#" class="flex-c-m p-lr-10 trans-04">
 							My Account
 						</a>
 
@@ -172,10 +180,6 @@
 
 				<li>
 					<a href="contact.html">Contact</a>
-                </li>
-                
-                <li>
-					<a href="policy.html">Privacy Policy</a>
 				</li>
 			</ul>
 		</div>
@@ -245,96 +249,127 @@
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.png');">
-		<!-- <h2 class="ltext-105 cl0 txt-center">
-			About
-		</h2> -->
-	</section>	
+	
+
+	          <!-- DataTales Example -->
+			  <div class="card shadow mb-4">
+				<div class="card-header py-3">
+				  <h6 class="m-0 font-weight-bold text-primary">MY ORDERS</h6>
+				</div>
+				<div class="card-body">
+				  <div class="table-responsive">
+					 
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					  <thead>
+						<tr>
+						  <th>Name</th>
+						  <th>Phone</th>
+						  <th>Email</th>
+						  <th>Date</th>
+						  <th>Status</th>
+						  <th>Details</th>
+						</tr>
+					  </thead>
+					 
+					  <tbody  id="tbody" >   
+	                
+	
+					  </tbody>
+					 
+					</table>
+
+					<p style="text-align: center;"> <b id="offline">  </b>  </p>
+
+				  </div>
+				</div>
+			  </div>
 
 
-	<!-- Content page -->
-	<section class="bg0 p-t-75 p-b-120">
+	<!-- Content page
+	<section class="bg0 p-t-104 p-b-116">
 		<div class="container">
-			<div class="row p-b-148">
-				<div class="col-md-7 col-lg-8">
-					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
-						<h3 class="mtext-111 cl2 p-b-16">
-							Privacy Policy
-						</h3>
+			<div class="flex-w flex-tr">
+				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+					<form>
+						<h4 class="mtext-105 cl2 txt-center p-b-30">
+							Send Us A Message
+						</h4>
 
-						<p class="stext-113 cl6 p-b-26">
-							Team Personage welcome you to the website ………………….. which is operated by the official members of team Personage. Every member of team is working as one of the significant stakeholders that strive to his/her maximum to maintain your privacy. Personage strictly discourage the invasion of customer’s privacy for which the brand has established concrete privacy policies as mentioned below:<br><br>
-                        
-                            1. All the information that we receive from the customer will be only used to process the order and will not be shared with any third party. Therefore, it is also suggested to the customers to prohibit from sharing their personal information (i.e. postal address, mobile number, email etc.) to the third party. <br><br>
-                            2. The information of visitors who visit the website of Personage is also used to manage data analytics for the development of future products and offerings. <br><br>
-                            3. Personal information of the customers is also used by the marketing team to update the customers regarding the new product offerings and discount offers, which primarily include direct mailing. <br><br>
-                            4. Customer’s information will only transfer to the authorised logistics partner who will help us in delivering the product on time. However, Personage reserved all the rights to take action against the third logistics for the misuse of any customer’s information. <br><br>
-                            5. All the customers and visitors reserved the right to request the team through email and chat box regarding un-subscription of direct marketing. </li>
-                        
-                        </p>
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
+							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON">
+						</div>
 
-                        <h3 class="mtext-111 cl2 p-b-16">
-							Return Policy
-						</h3>
+						<div class="bor8 m-b-30">
+							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?"></textarea>
+						</div>
 
-						<p class="stext-113 cl6 p-b-26">
-							Personage always strive to deliver finest quality products to meet the requirement of the consumer and to establish a feeling of love for the brand.
-    Unfortunately, due to any reason if consumer wish to return the product, then in that case Personage offer 15 days’ return policy (applicable in case of faulty product or late delivery). All customer need to do is to send the uncut and original product in the same condition delivered by the courier to the below mentioned address along with complete packaging material, original receipt and tags. The payment will be return through online bank transfer after receiving the product. <br><br>
-   <b> Note: Return policy is only applicable on non-discounted items; however, sales items can be exchange but not return.</b>
-
-						</p>
-
-						<p class="stext-113 cl6 p-b-26">
-							Any questions? contact us on <a href="https://web.facebook.com/pg/personage4/">facebook page</a> or call us on 0334-3767882.
-						</p>
-					</div>
+						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+							Submit
+						</button>
+					</form>
 				</div>
 
-				<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
-					<div class="how-bor1 ">
-						<div class="hov-img0">
-							<img src="images/policy.jpg" alt="IMG">
+				<div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+					<div class="flex-w w-full p-b-42">
+						<span class="fs-18 cl5 txt-center size-211">
+							<span class="lnr lnr-map-marker"></span>
+						</span>
+
+						<div class="size-212 p-t-2">
+							<span class="mtext-110 cl2">
+								Address
+							</span>
+
+							<p class="stext-115 cl6 size-213 p-t-18">
+								Online Store, Contact us on <a href="https://www.facebook.com/personage4/">facebook</a>
+							</p>
 						</div>
 					</div>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
-					<div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
-						<h3 class="mtext-111 cl2 p-b-16">
-							Why Personage?
-						</h3>
 
-						<p class="cl6 p-b-26" style="font-size:20px">
-							<ul><li>Same day shipping.</li><br><li>Minimum Lead Time.</li><br><li>Easy Return & Exchange Policy.</li><br><li>24/7 Online Support.</li></ul>
-						</p>
+					<div class="flex-w w-full p-b-42">
+						<span class="fs-18 cl5 txt-center size-211">
+							<span class="lnr lnr-phone-handset"></span>
+						</span>
 
-						<!-- <div class="bor16 p-l-29 p-b-9 m-t-22">
-							<p class="stext-114 cl6 p-r-40 p-b-11">
-								Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
-							</p>
-
-							<span class="stext-111 cl8">
-								- Steve Job’s 
+						<div class="size-212 p-t-2">
+							<span class="mtext-110 cl2">
+								Lets Talk
 							</span>
-						</div> -->
-					</div>
-				</div>
 
-				<div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
-					<div class="how-bor2">
-						<div class="hov-img0">
-							<img src="images/icons/logo.jpg" alt="IMG">
+							<p class="stext-115 cl1 size-213 p-t-18">
+								0334-3767882
+							</p>
+						</div>
+					</div>
+
+					<div class="flex-w w-full">
+						<span class="fs-18 cl5 txt-center size-211">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+
+						<div class="size-212 p-t-2">
+							<span class="mtext-110 cl2">
+								Sale Support
+							</span>
+
+							<p class="stext-115 cl1 size-213 p-t-18">
+								personage2020@gmail.com
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>	 -->
 	
 	
-		
+	<!-- Map -->
+	<!-- <div class="map">
+		<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
+	</div> -->
+
+
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -379,22 +414,22 @@
 
 					<ul>
 						<li class="p-b-10">
-							<a href="contact.html" class="stext-107 cl7 hov-cl1 trans-04">
-								Contact Us
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
 							</a>
 						</li>
 
-						<li class="p-b-10">
-							<a href="policy.html" class="stext-107 cl7 hov-cl1 trans-04">
-								Return 
+						<!-- <li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns 
 							</a>
-						</li>
-<!-- 
+						</li> -->
+
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
 								Shipping
 							</a>
-						</li> -->
+						</li>
 
 						<!-- <li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
@@ -448,6 +483,25 @@
 				</div>
 			</div>
 
+
+			  <!--Voucher Modal-->
+	<div  class="modal fade" style="margin-top: 10%;" id="signupModalCenter"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			<!-- <div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalCenterTitle">Signup Form</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div> -->
+			<div class="modal-body" id="showmodaldata" >
+			 
+			</div>
+      <p style="text-align: center;  font-size: 30px; " > <b  id="resolve" >  </b> </p>
+			<!-- <label>Already have an account? <a id="signup-login" href="#" data-toggle="modal">login</a></label> -->
+			</div>
+		  </div>
+		</div>
 			<!-- <div class="p-t-40">
 				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">
@@ -473,7 +527,7 @@
 
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="index.html">PERSONAGE</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://colorlib.com" target="_blank">PERSONAGE</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 				</p>
@@ -493,7 +547,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 	<!--===============================================================================================-->	
 	<script src="./config/firebase.js"></script>
-
 
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -532,8 +585,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		});
 	</script>
 <!--===============================================================================================-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="js/map-custom.js"></script>
+<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/productDetail.js"></script>
-	
+	<script src="js/myOrders.js"></script>
+	<script> window.onload = showTables; </script>
+
 </body>
 </html>

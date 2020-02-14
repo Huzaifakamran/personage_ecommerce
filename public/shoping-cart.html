@@ -151,28 +151,36 @@
 		
 				<!-- Menu Mobile -->
 				<div class="menu-mobile">
-					<ul class="topbar-mobile">
-						<li>
-							<div class="left-top-bar">
-							<!-- left data -->
-							</div>
-						</li>
-		
-						<li>
-							<!-- <div class="right-top-bar flex-w h-full">
-							
-								<a href="login/login.html" class="flex-c-m p-lr-10 trans-04">
-									My Account
-								</a>
-		
-							</div> -->
-						</li>
-					</ul>
-		
 					<ul class="main-menu-m">
 						<li>
+							
 							<a href="index.html">Home</a>
+							<ul class="sub-menu-m">
+								<li><a href="login/login.html" class="loginModal" id='loginbtn1' >Login</a></li>
+								<li><a href="" class="loginModal" onclick="signout()" id='logoutbtn1'>Logout</a></li>
+								<li class="js-hide-sidebar"  onclick="showWishlist()">
+									<a href="#">
+										My Wishlist
+									</a>
+								</li>
+								<li><a href="myOrders.html">My Orders</a></li>
+							</ul>
+							<span class="arrow-main-menu-m">
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</span>
 						</li>
+		
+						<!-- <li>
+							<a href="product.html">Shop</a>
+						</li>
+		
+						<li>
+							<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+						</li>
+		
+						<li>
+							<a href="blog.html">Blog</a>
+						</li> -->
 		
 						<li>
 							<a href="about.html">About</a>
@@ -181,7 +189,7 @@
 						<li>
 							<a href="contact.html">Contact</a>
 						</li>
-
+		
 						
 						<li>
 							<a href="policy.html">Privacy Policy</a>

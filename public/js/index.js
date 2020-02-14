@@ -8,10 +8,15 @@ function showdata(){
 
     if(status == 'undefined' || status == undefined || status == null || myid == 'undefined' || myid == undefined || myid == null || myid == '' || status == ''){
                   document.getElementById('loginbtn').removeAttribute('hidden')
+                  document.getElementById('loginbtn1').removeAttribute('hidden')
                   document.getElementById('logoutbtn').hidden = 'true'
+                  document.getElementById('logoutbtn1').hidden = 'true'
     }else{
         document.getElementById('logoutbtn').removeAttribute('hidden')
+        document.getElementById('logoutbtn1').removeAttribute('hidden')
                   document.getElementById('loginbtn').hidden = 'true'
+                 
+                  document.getElementById('loginbtn1').hidden = 'true'
    
     }
 
@@ -270,10 +275,13 @@ function showWishlist(){
                 firebase.database().ref(`Users/${localStorage.getItem('ls_id')}/MyWishlist/${childSnapshot.val().id}`).set({})
                 showToast('Remove from wishlist successfully')
 
-                var myasynktask = new Promise(function(sucess , failure){
-                    setTimeout(function()  {
-                        window.location.reload();
-                    }, 2000)});
+                document.getElementById("showwishlist").innerHTML = '';
+                showWishlist()
+
+                // var myasynktask = new Promise(function(sucess , failure){
+                //     setTimeout(function()  {
+                //         window.location.reload();
+                //     }, 2000)});
 
              }
              
@@ -328,12 +336,19 @@ function showWishlist(){
     })
 }}
 
+// document.getElementById('search').onkeydown = function(event) {
+//     if (event.keyCode == 13) {
+//        search()
+//     }
+// }
+
 function search(){
 
 
-    console.log('aa')
+    
 
     var checker=0;
+    var txtChecker = 0;
    
        // to remonve all previous search data from div 
        document.getElementById("showfetch").innerHTML="";
@@ -341,12 +356,7 @@ function search(){
        
        // taking input from user in search bar
        var txt = document.getElementById('search').value;
-       if(txt.length<2){
-           //alert("write something");
-           showToast('please searh value must contain 2 or more characters');
-       }
-       else{
-           
+   
            var myasynktask = new Promise(function(sucess , failure){
                setTimeout(function()  {
                    if(checker==0){
@@ -365,6 +375,11 @@ function search(){
                         
                         var nam=childSnapshot.val().prodName+"s";
                         var desc=childSnapshot.val().prodColor+"s";
+
+                        if(txt.length == 0  || txt == ''){
+                            txt = childSnapshot.val().prodName; 
+                            txtChecker = 1;
+                        }
                         
                         
                         /* geting data from firebase and concatinate (name , description , model) of each and every item in
@@ -374,6 +389,11 @@ function search(){
                         // check the presence of data in firbase with the refrence of user input in search bar
                         if(data.toUpperCase().includes(txt.toUpperCase())){
                        
+                            if(txtChecker == 1){
+                                txt = '';
+                                console.log('txt' , txt)
+                            }
+
                        checker=1;    
 
 
@@ -527,7 +547,7 @@ function search(){
                        }
                    });
                });
-           }
+           
    
        }
    

@@ -71,6 +71,11 @@ function placeOrder(){
                 detail.splice(0 , 1)
             }
 
+            var myasynktask = new Promise(function(sucess , failure){
+                setTimeout(function()  {
+                    window.location.href = "myOrders.html"
+                 }, 1000)});
+
 
 
     //     for(var i=0; i<detail.length; i++){

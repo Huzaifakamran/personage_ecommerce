@@ -30,6 +30,8 @@ function showdata(){
     firebase.database().ref("/Items").on("value", function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
 
+            if(childSnapshot.val().prodQuantity > 0){
+
             checker = 1;
 
             var ndiv = document.createElement('div');
@@ -199,8 +201,8 @@ function showdata(){
         //          </div>
         //      </div>
         //  </div> 
-            
-        })
+        }
+      })
    })
 
    var myasynktask = new Promise(function(sucess , failure){
@@ -309,7 +311,9 @@ function showWishlist(){
              ma3.setAttribute('class','btn-addwish-b2 dis-block pos-relative js-addwish-b2');
 
 
+             
              div1.appendChild(nimg);
+
              div1.appendChild(ma);
              //div1.appendChild(ma212);
              

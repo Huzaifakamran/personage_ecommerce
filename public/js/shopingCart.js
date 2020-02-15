@@ -1,4 +1,4 @@
-var total = 0 , delivery = 200 , final , detail = [] , voucherCode = 'N/A'  , maxDiscount , miniVal  , voucherApplied = 0;
+var total = 0 , delivery = 200 , final , detail = [] , voucherCode = 'N/A'  , maxDiscount , miniVal  , voucherApplied = 0; quantityChecker = 1 , quantityRemover=1;
 
 
 function placeOrder(){
@@ -16,7 +16,38 @@ function placeOrder(){
 	}
 	else if(phone.length <11 || phone.length > 11){
         document.getElementById('error1').innerHTML = 'Enter correct number'
-	}
+    }
+    else if(quantityChecker <= detail.length){
+        var i = quantityChecker - 1;
+            firebase.database().ref(`Items/${detail[i].itemID}`).on("value", function(snapshot) {
+                var prevQuantity = snapshot.val().prodQuantity;
+                 if( parseInt(prevQuantity) >= parseInt(detail[i].shirtQuantity)){
+                    // var newQuantity = parseInt(prevQuantity) - parseInt(detail[i].shirtQuantity);
+                    // firebase.database().ref(`Items/${detail[i].itemID}/`).update({prodQuantity : newQuantity})
+                    quantityChecker ++;
+                    placeOrder();
+                }else{
+                    document.getElementById("error1").style.color = "red";
+                    document.getElementById('error1').innerHTML = "The item that you are selected '" + snapshot.val().prodName + "' only " + prevQuantity + ' Piece left. You need to remove this item from your cart and select again only remaining quantity to continue  ' 
+                }
+            })  
+    
+    }
+
+    else if(quantityRemover <= detail.length){
+        var i = quantityRemover - 1;
+        firebase.database().ref(`Items/${detail[i].itemID}`).on("value", function(snapshot) {
+            var prevQuantity = snapshot.val().prodQuantity;
+             if( parseInt(prevQuantity) >= parseInt(detail[i].shirtQuantity)){
+                var newQuantity = parseInt(prevQuantity) - parseInt(detail[i].shirtQuantity);
+                firebase.database().ref(`Items/${detail[i].itemID}/`).update({prodQuantity : newQuantity})
+                quantityRemover ++;
+                placeOrder();
+            }
+        })  
+       
+    }
+
     else{
        var checker = 0;
         document.getElementById('error1').innerHTML = '';
@@ -78,17 +109,7 @@ function placeOrder(){
 
 
 
-    //     for(var i=0; i<detail.length; i++){
-    //         firebase.database().ref(`Items/${detail[i].itemID}`).on("value", function(snapshot) {
-    //             var prevQuantity = snapshot.val().prodQuantity;
-                
-    //              if( parseInt(prevQuantity) >= parseInt(detail[i].shirtQuantity)){
-    //             var newQuantity = parseInt(prevQuantity) - parseInt(detail[i].shirtQuantity);
-    //             firebase.database().ref(`Items/${detail[i].itemID}/`).set({prodQuantity : newQuantity})
-    //             }
-    //         })  
-
-    // }
+  
 
   }
 }
